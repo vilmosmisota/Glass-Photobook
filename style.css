@@ -27,9 +27,9 @@ body {
   margin: 0 auto;
   font-family: var(--primary-font);
   color: var(--light);
-  /* background-image: url("./assets/black-felt.png");
+  background-image: url("./assets/black-felt.png");
   background-position: center;
-  background-repeat: repeat; */
+  background-repeat: repeat;
 }
 
 html,
@@ -56,17 +56,6 @@ button:active {
 img {
   width: 100%;
   display: block;
-}
-
-.texture-container {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./assets/black-felt.png");
-  background-position: center;
-  background-repeat: repeat;
-  z-index: 1;
-  position: fixed;
-  opacity: 0.2;
 }
 
 header {
@@ -139,6 +128,7 @@ header {
 
 .header-form h2 {
   text-transform: uppercase;
+  text-align: center;
   font-size: 15px;
   padding: 15px 0;
 }
@@ -163,8 +153,9 @@ header {
 .header-info-wrapper {
   color: var(--gold);
   text-transform: uppercase;
-  justify-self: flex-end;
-  align-self: flex-end;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
 }
 
 main {
@@ -178,7 +169,7 @@ main {
   height: min-content;
   align-items: center;
   justify-items: stretch;
-  padding: 50px 0;
+  padding-top: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -223,6 +214,7 @@ main {
 .three {
   grid-column: 1/2;
   grid-row: 3/4;
+  padding-bottom: 0;
 }
 
 .exhibition {
@@ -252,4 +244,30 @@ main {
   position: absolute;
   bottom: 50%;
   right: -101%;
+}
+
+.design-element {
+  position: absolute;
+  bottom: 10%;
+}
+
+.main-description-wrapper {
+  padding: 50px 0;
+}
+
+.description {
+  background: linear-gradient(
+    174.14deg,
+    #f2f0e9 10.12%,
+    rgba(196, 196, 196, 0.5) 150.7%
+  );
+  border-radius: 15px;
+  width: 85vw;
+  height: min-content;
+  margin: 0 auto;
+}
+
+.description p {
+  color: var(--dark);
+  padding: 1.5rem;
 }
