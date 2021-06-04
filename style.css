@@ -27,9 +27,23 @@ body {
   margin: 0 auto;
   font-family: var(--primary-font);
   color: var(--light);
+  /* background-image: url("./assets/black-felt.png");
+  background-position: center;
+  background-repeat: repeat; */
+}
+
+.grain-container {
+  position: fixed;
+  top:0;
+  height: 100%;
+  width: 100%;
   background-image: url("./assets/black-felt.png");
   background-position: center;
   background-repeat: repeat;
+  opacity:0.1;
+  
+}
+
 }
 
 html,
@@ -172,9 +186,10 @@ main {
   padding-top: 50px;
   overflow: hidden;
   position: relative;
+  border-bottom: 4px solid var(--gold);
 }
 
-.statement-wrapper::before {
+/* .statement-wrapper::before {
   content: "";
   position: absolute;
   width: 90vw;
@@ -189,7 +204,7 @@ main {
   );
   filter: blur(250px);
   z-index: -1;
-}
+} */
 
 .statements {
   text-transform: uppercase;
@@ -209,12 +224,14 @@ main {
   grid-column: 1/2;
   grid-row: 2/3;
   color: var(--dark);
+  -webkit-text-stroke: 1px var(--light);
 }
 
 .three {
   grid-column: 1/2;
   grid-row: 3/4;
   padding-bottom: 0;
+  color: var(--gold);
 }
 
 .exhibition {
@@ -256,12 +273,7 @@ main {
 }
 
 .description {
-  background: linear-gradient(
-    174.14deg,
-    #f2f0e9 10.12%,
-    rgba(196, 196, 196, 0.5) 150.7%
-  );
-  border-radius: 15px;
+  background: var(--gold);
   width: 85vw;
   height: min-content;
   margin: 0 auto;
