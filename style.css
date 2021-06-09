@@ -206,7 +206,7 @@ main {
   font-size: 20px;
   align-self: flex-start;
   opacity: 0;
-  transition: all 250ms ease-in;
+  transition: all 250ms ease-out;
 }
 
 .one {
@@ -228,7 +228,7 @@ main {
   color: var(--gold);
 }
 
-.active {
+.active-statements {
   opacity: 1;
 }
 
@@ -274,16 +274,34 @@ main {
   max-width: 800px;
   height: min-content;
   margin: 0 auto;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 500ms ease-in;
+  transition-delay: 250ms;
+}
+
+.active-description {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .description p {
   color: var(--dark);
   padding: 1.5rem;
   font-weight: 600;
-  transition: all 250ms ease-in;
 }
 
-.main-description-wrapper::before {
+.mission {
+  opacity: 0;
+  transition: all 250ms ease-in;
+  transition-delay: 750ms;
+}
+
+.active-mission {
+  opacity: 1;
+}
+
+/* .main-description-wrapper::before {
   position: absolute;
   display: block;
   top: -100px;
@@ -293,6 +311,25 @@ main {
   width: 1px;
   height: 100%;
   z-index: -1;
+} */
+
+.description-design {
+  position: absolute;
+  display: block;
+  top: -100px;
+  left: 50%;
+  content: "";
+  background-color: var(--gold);
+  width: 1px;
+  height: 150px;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 250ms ease-in;
+}
+
+.active-description-design {
+  transform: scaleY(1);
 }
 
 .video-wrapper {
@@ -322,6 +359,14 @@ form {
   padding: 1.5rem;
   cursor: pointer;
   border-radius: 15px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 500ms ease-in;
+}
+
+.active-form {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 form h3 {
@@ -459,8 +504,13 @@ footer {
     padding: 100px 0;
   }
 
-  .main-description-wrapper::before {
+  /* .main-description-wrapper::before {
     top: -200px;
+  } */
+
+  .description-design {
+    top: -200px;
+    height: 300px;
   }
 
   .description p {
@@ -531,8 +581,13 @@ footer {
     right: -151%;
   }
 
-  .main-description-wrapper::before {
+  /* .main-description-wrapper::before {
     top: -250px;
+  } */
+
+  .description-design {
+    top: -250px;
+    height: 350px;
   }
 
   .video-wrapper {
