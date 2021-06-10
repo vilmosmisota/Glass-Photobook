@@ -206,7 +206,7 @@ main {
   font-size: 20px;
   align-self: flex-start;
   opacity: 0;
-  transition: all 250ms ease-out;
+  transition: all 500ms ease-out;
 }
 
 .one {
@@ -343,6 +343,15 @@ main {
   margin: 0 auto 150px auto;
   text-align: center;
   position: relative;
+  background-color: var(--gold);
+  width: 85%;
+  height: max-content;
+  max-width: 600px;
+  color: var(--dark);
+  border-radius: 15px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 500ms ease-in;
 }
 
 form {
@@ -350,23 +359,21 @@ form {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--gold);
-  width: 85%;
-  height: max-content;
-  max-width: 600px;
   margin: 0 auto;
-  color: var(--dark);
   padding: 1.5rem;
   cursor: pointer;
-  border-radius: 15px;
   opacity: 0;
-  transform: scaleX(0);
-  transition: all 500ms ease-in;
+  transition: all 250ms ease-in;
+  transition-delay: 500ms;
+}
+
+.active-form-container {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .active-form {
   opacity: 1;
-  transform: scaleX(1);
 }
 
 form h3 {

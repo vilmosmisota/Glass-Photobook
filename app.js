@@ -1,5 +1,6 @@
 const statements = document.querySelectorAll(".statements");
 const form = document.querySelector("form");
+const formContainer = document.querySelector(".form-container");
 const descriptionDesign = document.querySelector(".description-design");
 const description = document.querySelector(".description");
 const descriptionPharagraph = document.querySelector(".mission");
@@ -36,12 +37,13 @@ const animateForm = () => {
   function showItem(entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("active-form");
+        entry.target.classList.add("active-form-container");
+        form.classList.add("active-form");
       }
     });
   }
 
-  observer.observe(form);
+  observer.observe(formContainer);
 };
 
 const animateDescriptionDesign = () => {
